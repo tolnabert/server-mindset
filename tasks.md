@@ -4,13 +4,38 @@
 
 Answer the following questions:
 
-- A good start to understand the repo is to check the `package.json`. What is the HTTP server library used here? What development tools are configured? 
+- A good start to understand the repo is to check the `package.json`. What is the HTTP server library used here?
+Fastify the HTTP server library used in this project.
+- What development tools are configured? 
+TS compiler
+JEST JavaScript testing framework
+@types/jest: Type definitions for Jest allowing to use it in TS
+ts-jest: A Jest transformer for TypeScript, allowing Jest to understand TS
+nodemon: automatically restarts the server whenever file changes are detected
+rimraf: A UNIX command for removing files and directories (useful for cleaning up the build directory)
+@types/node: Type definitions for Node.js, enabling TypeScript to understand Node.js globals and APIs.
+
 - What does the following scripts do? `dev`, `test`
+dev: the script runs the development server using ts-node with automatic restarts on file changes via nodemon
+test: the test script executes the Jest testing framework to run defined tests in the project.
+
 - What is the entry point of the server?
-- What do you think why is the `app.ts` and the `server.ts` are separated? 
+server.ts
+
+- What do you think why is the `app.ts` and the `server.ts` are separated?
+app.ts is the endpoint definitions
+server.ts is the launching the server and setting it up
+
+
 - If you would create a new endpoint in which file would you put it?
+app.ts
+
+
 - In the tests which method simulates the HTTP request?
+.get
+
 - What do you think what does the `ts-node` package do?
+instead of tsc, runs instantly the project
 
 ## Task 2: Meet with Fastify
 
